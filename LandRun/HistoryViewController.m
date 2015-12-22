@@ -1,25 +1,22 @@
 //
-//  RegisterViewController.m
+//  HistoryViewController.m
 //  LandRun
 //
 //  Created by students@deti on 22/12/15.
 //  Copyright © 2015 students@deti. All rights reserved.
 //
 
-#import "RegisterViewController.h"
+#import "HistoryViewController.h"
 
-@interface RegisterViewController ()
+@interface HistoryViewController ()
 
 @end
 
-@implementation RegisterViewController
+@implementation HistoryViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-    self.textViewUsername.delegate = self;
-    self.textViewPassword.delegate = self;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -36,11 +33,5 @@
     // Pass the selected object to the new view controller.
 }
 */
-
--(BOOL)textFieldShouldReturn:(UITextField *)textField{
-    [textField resignFirstResponder];
-    
-    return YES;
-}
 
 @end

@@ -14,6 +14,10 @@
 		64904A851C29CB070065CB6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64904A841C29CB070065CB6C /* Assets.xcassets */; };
 		64904A881C29CB070065CB6C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64904A861C29CB070065CB6C /* LaunchScreen.storyboard */; };
 		64904A911C29CE170065CB6C /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 64904A901C29CE170065CB6C /* RegisterViewController.m */; };
+		64904A941C29E7550065CB6C /* LoggedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 64904A931C29E7550065CB6C /* LoggedViewController.m */; };
+		64904A971C29EE850065CB6C /* StartLandViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 64904A961C29EE850065CB6C /* StartLandViewController.m */; };
+		64904A9A1C29EE930065CB6C /* HistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 64904A991C29EE930065CB6C /* HistoryViewController.m */; };
+		64904A9C1C29F48E0065CB6C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64904A9B1C29F48E0065CB6C /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +33,13 @@
 		64904A891C29CB070065CB6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		64904A8F1C29CE170065CB6C /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
 		64904A901C29CE170065CB6C /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
+		64904A921C29E7550065CB6C /* LoggedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoggedViewController.h; sourceTree = "<group>"; };
+		64904A931C29E7550065CB6C /* LoggedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoggedViewController.m; sourceTree = "<group>"; };
+		64904A951C29EE850065CB6C /* StartLandViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartLandViewController.h; sourceTree = "<group>"; };
+		64904A961C29EE850065CB6C /* StartLandViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartLandViewController.m; sourceTree = "<group>"; };
+		64904A981C29EE930065CB6C /* HistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoryViewController.h; sourceTree = "<group>"; };
+		64904A991C29EE930065CB6C /* HistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryViewController.m; sourceTree = "<group>"; };
+		64904A9B1C29F48E0065CB6C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64904A9C1C29F48E0065CB6C /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -45,6 +57,7 @@
 		64904A6C1C29CB070065CB6C = {
 			isa = PBXGroup;
 			children = (
+				64904A9B1C29F48E0065CB6C /* MapKit.framework */,
 				64904A771C29CB070065CB6C /* LandRun */,
 				64904A761C29CB070065CB6C /* Products */,
 			);
@@ -66,6 +79,12 @@
 				64904A7E1C29CB070065CB6C /* ViewController.h */,
 				64904A7F1C29CB070065CB6C /* ViewController.m */,
 				64904A811C29CB070065CB6C /* Main.storyboard */,
+				64904A951C29EE850065CB6C /* StartLandViewController.h */,
+				64904A961C29EE850065CB6C /* StartLandViewController.m */,
+				64904A981C29EE930065CB6C /* HistoryViewController.h */,
+				64904A991C29EE930065CB6C /* HistoryViewController.m */,
+				64904A921C29E7550065CB6C /* LoggedViewController.h */,
+				64904A931C29E7550065CB6C /* LoggedViewController.m */,
 				64904A8F1C29CE170065CB6C /* RegisterViewController.h */,
 				64904A901C29CE170065CB6C /* RegisterViewController.m */,
 				64904A841C29CB070065CB6C /* Assets.xcassets */,
@@ -154,9 +173,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64904A941C29E7550065CB6C /* LoggedViewController.m in Sources */,
 				64904A801C29CB070065CB6C /* ViewController.m in Sources */,
+				64904A971C29EE850065CB6C /* StartLandViewController.m in Sources */,
 				64904A7D1C29CB070065CB6C /* AppDelegate.m in Sources */,
 				64904A7A1C29CB070065CB6C /* main.m in Sources */,
+				64904A9A1C29EE930065CB6C /* HistoryViewController.m in Sources */,
 				64904A911C29CE170065CB6C /* RegisterViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,25 +1,22 @@
 //
-//  RegisterViewController.m
+//  LoggedViewController.m
 //  LandRun
 //
 //  Created by students@deti on 22/12/15.
 //  Copyright © 2015 students@deti. All rights reserved.
 //
 
-#import "RegisterViewController.h"
+#import "LoggedViewController.h"
 
-@interface RegisterViewController ()
+@interface LoggedViewController ()
 
 @end
 
-@implementation RegisterViewController
+@implementation LoggedViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-    self.textViewUsername.delegate = self;
-    self.textViewPassword.delegate = self;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -36,11 +33,5 @@
     // Pass the selected object to the new view controller.
 }
 */
-
--(BOOL)textFieldShouldReturn:(UITextField *)textField{
-    [textField resignFirstResponder];
-    
-    return YES;
-}
 
 @end

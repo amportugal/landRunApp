@@ -1,25 +1,22 @@
 //
-//  RegisterViewController.m
+//  PhotoViewController.m
 //  LandRun
 //
 //  Created by students@deti on 22/12/15.
 //  Copyright © 2015 students@deti. All rights reserved.
 //
 
-#import "RegisterViewController.h"
+#import "PhotoViewController.h"
 
-@interface RegisterViewController ()
+@interface PhotoViewController ()
 
 @end
 
-@implementation RegisterViewController
+@implementation PhotoViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-    self.textViewUsername.delegate = self;
-    self.textViewPassword.delegate = self;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -37,10 +34,12 @@
 }
 */
 
--(BOOL)textFieldShouldReturn:(UITextField *)textField{
-    [textField resignFirstResponder];
+- (IBAction)takePhoto:(id)sender{
+    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+    picker.delegate = self;
+    picker.allowsEditing = YES;
+    picker.sourceType = UIImagePickerControllerSourceTypeCamera;
     
-    return YES;
+    [self presentViewController:picker animated:YES completion:NULL];
 }
-
 @end
