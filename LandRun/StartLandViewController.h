@@ -7,8 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
+#import <CoreLocation/Corelocation.h>
 
-@interface StartLandViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+
+@interface StartLandViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate,
+    CLLocationManagerDelegate> {
+        CLLocationManager *locationManager;
+    }
+
+
+
+@property (weak, nonatomic) IBOutlet MKMapView *mapView;
 
 @property (weak, nonatomic) IBOutlet UILabel *HumLabel;
 @property (weak, nonatomic) IBOutlet UILabel *PressLabel;

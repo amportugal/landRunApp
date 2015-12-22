@@ -8,9 +8,8 @@
 
 #import "StartLandViewController.h"
 
-@interface StartLandViewController ()
+@import CoreLocation;
 
-@end
 
 @implementation StartLandViewController
 
@@ -22,6 +21,29 @@
     [self.KcalLabel setHidden:YES];
     [self.TempLabel setHidden:YES];
     
+    /*[self.mapView addObserver:self
+                   forKeyPath:@"myLocation"
+                      options:(NSKeyValueObservingOptionNew |
+                               NSKeyValueObservingOptionOld)
+                      context:NULL];*/
+
+    NSLog(@"asdadasdsa");
+    
+    locationManager = [[CLLocationManager alloc] init];
+    locationManager.delegate = self;
+    locationManager.distanceFilter = kCLDistanceFilterNone;
+    locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+    
+    NSLog(@"asdadasdsa");
+    [locationManager requestAlwaysAuthorization];
+    
+    [locationManager startUpdatingLocation];
+    
+}
+
+- (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation {
+    NSLog(@"OldLocation %f %f", oldLocation.coordinate.latitude, oldLocation.coordinate.longitude);
+    NSLog(@"NewLocation %f %f", newLocation.coordinate.latitude, newLocation.coordinate.longitude);
 }
 
 - (void)didReceiveMemoryWarning {
@@ -50,8 +72,13 @@
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
     
+    
     UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
+    
     UIImageWriteToSavedPhotosAlbum(chosenImage, nil, nil, nil);
-        
+    
+    //CLLocationCoordinate2D myLocation = self.mapView.
+    
+    [picker dismissViewControllerAnimated:YES completion:NULL];
 }
 @end
