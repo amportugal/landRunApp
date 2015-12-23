@@ -8,6 +8,7 @@
 
 #import "StartLandViewController.h"
 #import <Parse/Parse.h>
+#import "AssetsLibrary/AssetsLibrary.h"
 
 @import CoreLocation;
 
@@ -71,17 +72,56 @@
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
     
-    PFUser *current = [PFUser currentUser];
-    
-    NSLog(current.username);
-    
-    
+    __block NSURL *image_url;
     
     UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
+    ALAssetsLibrary *library = [[ALAssetsLibrary alloc] init];
     
-    UIImageWriteToSavedPhotosAlbum(chosenImage, nil, nil, nil);
+    [library writeImageToSavedPhotosAlbum:[chosenImage CGImage] orientation:(ALAssetOrientation)[chosenImage imageOrientation] completionBlock:^(NSURL *assetURL, NSError *error){
+        if(error){
+            NSLog(@"error");
+            
+        }
+        else{
+            image_url=assetURL;
+            NSLog(@"url %@", assetURL);
+            
+            NSLog(@"url %@", [image_url absoluteString]);
+            [PFGeoPoint geoPointForCurrentLocationInBackground:^(PFGeoPoint * _Nullable geoPoint, NSError * _Nullable error) {
+                
+                if (!error) {
+                    PFUser *current = [PFUser currentUser];
+                    
+                    PFObject *landSnapshot = [PFObject objectWithClassName:@"LandSnapshot"];
+                    landSnapshot[@"username"] = current.username;
+                    landSnapshot[@"photoName"] = [image_url absoluteString];
+                    landSnapshot[@"humidity"] = @50;
+                    landSnapshot[@"pressure"] = @51;
+                    landSnapshot[@"kCalories"] = @52;
+                    landSnapshot[@"temperature"] = @53;
+                    landSnapshot[@"position"] = geoPoint;
+                    
+                    [landSnapshot saveInBackground];
+                    
+                    CLLocationCoordinate2D coord = CLLocationCoordinate2DMake([geoPoint latitude], [geoPoint longitude]);
+                    
+                    /*Add a marker to the map*/
+                    MKPointAnnotation *annotation = [[MKPointAnnotation alloc] init];
+                    [annotation setCoordinate:coord];
+                    [annotation setTitle:@"Keep running bitch"];
+                    [self.mapView addAnnotation:annotation];
+                    
+                    
+                }
+                
+            }];
+            
+            [picker dismissViewControllerAnimated:YES completion:NULL];
+        }
+    }];
     
-    [picker dismissViewControllerAnimated:YES completion:NULL];
+    
+    
     
     
 }
