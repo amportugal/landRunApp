@@ -8,7 +8,7 @@
         <!--Login Page-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="Login Page" id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="loginPage" title="Login Page" id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -42,7 +42,7 @@
                                 <animations/>
                                 <state key="normal" title="Login"/>
                                 <connections>
-                                    <segue destination="r43-Sg-T8e" kind="show" id="GBJ-FF-1Jv"/>
+                                    <action selector="tryLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sCU-b9-Kc2"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XkF-Dp-9Ah">
@@ -57,7 +57,7 @@
                                 <rect key="frame" x="20" y="285" width="280" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                         </subviews>
                         <animations/>
@@ -116,12 +116,15 @@
                                 <rect key="frame" x="16" y="293" width="284" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EQB-Xq-o5f">
                                 <rect key="frame" x="16" y="368" width="284" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Register"/>
+                                <connections>
+                                    <action selector="tryRegister:" destination="SDc-nh-fcY" eventType="touchUpInside" id="0k7-QG-mau"/>
+                                </connections>
                             </button>
                         </subviews>
                         <animations/>
@@ -140,7 +143,7 @@
         <!--Navigation Controller-->
         <scene sceneID="jzx-8L-owS">
             <objects>
-                <navigationController id="r43-Sg-T8e" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="userLoggedIn" id="r43-Sg-T8e" sceneMemberID="viewController">
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="4Ql-Vc-fg0">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -153,7 +156,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8PD-h6-PP9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="700" y="-159"/>
+            <point key="canvasLocation" x="697" y="-160"/>
         </scene>
         <!--Menu-->
         <scene sceneID="XbP-b9-vRN">

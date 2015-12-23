@@ -7,6 +7,7 @@
 //
 
 #import "StartLandViewController.h"
+#import <Parse/Parse.h>
 
 @import CoreLocation;
 
@@ -27,14 +28,12 @@
                                NSKeyValueObservingOptionOld)
                       context:NULL];*/
 
-    NSLog(@"asdadasdsa");
     
     locationManager = [[CLLocationManager alloc] init];
     locationManager.delegate = self;
     locationManager.distanceFilter = kCLDistanceFilterNone;
     locationManager.desiredAccuracy = kCLLocationAccuracyBest;
     
-    NSLog(@"asdadasdsa");
     [locationManager requestAlwaysAuthorization];
     
     [locationManager startUpdatingLocation];
@@ -72,13 +71,18 @@
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
     
+    PFUser *current = [PFUser currentUser];
+    
+    NSLog(current.username);
+    
+    
     
     UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
     
     UIImageWriteToSavedPhotosAlbum(chosenImage, nil, nil, nil);
     
-    //CLLocationCoordinate2D myLocation = self.mapView.
-    
     [picker dismissViewControllerAnimated:YES completion:NULL];
+    
+    
 }
 @end

@@ -10,6 +10,8 @@
 
 @interface RegisterViewController : UIViewController <UITextFieldDelegate>
 
+- (IBAction)tryRegister:(id)sender;
+
 @property (weak, nonatomic) IBOutlet UITextField *textViewUsername;
 
 @property (weak, nonatomic) IBOutlet UITextField *textViewPassword;

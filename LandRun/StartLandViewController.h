@@ -24,6 +24,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *PressLabel;
 @property (weak, nonatomic) IBOutlet UILabel *KcalLabel;
 @property (weak, nonatomic) IBOutlet UILabel *TempLabel;
+
 - (IBAction)takePhoto:(id)sender;
 
 @end
