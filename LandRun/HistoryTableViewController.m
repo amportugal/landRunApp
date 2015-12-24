@@ -16,7 +16,6 @@
 
 @implementation HistoryTableViewController
 
-@synthesize array;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -29,13 +28,15 @@
     PFQuery *query = [PFQuery queryWithClassName:@"LandSnapshot"];
     [query whereKey:@"username" equalTo:current.username];
     
-    array=[[NSMutableArray alloc] init];
+    self.array=[[NSMutableArray alloc] init];
+    self.array_ids=[[NSMutableArray alloc] init];
     
     NSArray *objects=[query findObjects];
     
         for (PFObject *message in objects) {
-            if ( ![array containsObject:message[@"landName"]]) {
-                [array addObject:message[@"landName"]];
+            if ( ![self.array_ids containsObject:message[@"landId"]]) {
+                [self.array addObject:message[@"landName"]];
+                [self.array_ids addObject:message[@"landId"]];
             }
             
             //message[@"landName"]=[[alertView textFieldAtIndex:0] text];
@@ -82,7 +83,7 @@
 
 -(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     //Value Selected by user
-    NSString *selectedValue = [array objectAtIndex:indexPath.row];
+    NSString *selectedValue = [self.array_ids objectAtIndex:indexPath.row];
     //Initialize new viewController
     //HistoryViewController *viewController = [[HistoryViewController alloc] initWithNibName:nil bundle:nil];
     //Pass selected value to a property declared in NewViewController
@@ -94,7 +95,7 @@
     HistoryViewController *viewController = [storyboard instantiateViewControllerWithIdentifier:@"historyPage"];
     [viewController setModalPresentationStyle:UIModalPresentationFullScreen];
     
-    viewController.valueToSearch= selectedValue;
+    viewController.valueToSearch=selectedValue;
     
     //[self presentViewController:viewController animated:NO completion:NULL];
     [self.navigationController pushViewController:viewController animated:YES];

@@ -10,4 +10,6 @@
 
 @interface DetailsHistoryViewController : UIViewController
 
+@property (nonatomic, strong) NSString *photoName;
+
 @end

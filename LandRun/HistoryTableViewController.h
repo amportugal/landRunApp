@@ -12,4 +12,6 @@
 
 @property(nonatomic, strong) NSMutableArray *array;
 
+@property(nonatomic, strong) NSMutableArray *array_ids;
+
 @end

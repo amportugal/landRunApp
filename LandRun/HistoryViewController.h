@@ -7,9 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
 
-@interface HistoryViewController : UIViewController
+@interface HistoryViewController : UIViewController <MKMapViewDelegate>
 
 @property (nonatomic, strong) NSString *valueToSearch;
+
+@property (weak, nonatomic) IBOutlet MKMapView *mapView;
 
 @end

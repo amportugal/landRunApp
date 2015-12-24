@@ -382,6 +382,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="mapView" destination="5oS-b0-jJb" id="V82-hz-9KF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hJP-mc-4S8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -390,7 +393,7 @@
         <!--Details History View Controller-->
         <scene sceneID="Ris-zv-t0n">
             <objects>
-                <viewController id="qHC-7W-Qew" customClass="DetailsHistoryViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="detailsHistoryPage" id="qHC-7W-Qew" customClass="DetailsHistoryViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="tYa-Ev-hYN"/>
                         <viewControllerLayoutGuide type="bottom" id="fsA-bl-P89"/>
