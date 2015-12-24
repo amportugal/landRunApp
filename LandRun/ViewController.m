@@ -78,7 +78,7 @@
                 
                 
                 UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-                UINavigationController *viewController = [storyboard instantiateViewControllerWithIdentifier:@"userLoggedIn"];
+                UINavigationController *viewController = [storyboard instantiateViewControllerWithIdentifier:@"loggedInPage"];
                 [viewController setModalPresentationStyle:UIModalPresentationFullScreen];
                 
                 [self presentViewController:viewController animated:NO completion:NULL];

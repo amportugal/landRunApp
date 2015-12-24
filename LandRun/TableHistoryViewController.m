@@ -1,24 +1,22 @@
 //
-//  HistoryViewController.m
+//  TableHistoryViewController.m
 //  LandRun
 //
-//  Created by students@deti on 22/12/15.
+//  Created by students@deti on 24/12/15.
 //  Copyright © 2015 students@deti. All rights reserved.
 //
 
-#import "HistoryViewController.h"
+#import "TableHistoryViewController.h"
 
-@interface HistoryViewController ()
+@interface TableHistoryViewController ()
 
 @end
 
-@implementation HistoryViewController
+@implementation TableHistoryViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-    NSLog(self.valueToSearch);
 }
 
 - (void)didReceiveMemoryWarning {

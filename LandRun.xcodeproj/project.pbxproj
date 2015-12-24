@@ -18,6 +18,7 @@
 		64904A971C29EE850065CB6C /* StartLandViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 64904A961C29EE850065CB6C /* StartLandViewController.m */; };
 		64904A9A1C29EE930065CB6C /* HistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 64904A991C29EE930065CB6C /* HistoryViewController.m */; };
 		64904A9C1C29F48E0065CB6C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64904A9B1C29F48E0065CB6C /* MapKit.framework */; };
+		64B2DA6E1C2C108000792BD3 /* HistoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 64B2DA6D1C2C108000792BD3 /* HistoryTableViewController.m */; };
 		64BF111F1C2AAA7F009A5EAD /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64BF111E1C2AAA7F009A5EAD /* CoreLocation.framework */; };
 		64BF11211C2AAA85009A5EAD /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64BF11201C2AAA85009A5EAD /* StoreKit.framework */; };
 		64BF11231C2AAA90009A5EAD /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64BF11221C2AAA90009A5EAD /* AudioToolbox.framework */; };
@@ -34,6 +35,7 @@
 		64BF11411C2AADEF009A5EAD /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64BF113B1C2AADEF009A5EAD /* ParseFacebookUtilsV4.framework */; };
 		64BF11421C2AADEF009A5EAD /* ParseTwitterUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64BF113C1C2AADEF009A5EAD /* ParseTwitterUtils.framework */; };
 		64BF11431C2AADEF009A5EAD /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64BF113D1C2AADEF009A5EAD /* ParseUI.framework */; };
+		64BF11461C2B3C19009A5EAD /* DetailsHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 64BF11451C2B3C19009A5EAD /* DetailsHistoryViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +58,8 @@
 		64904A981C29EE930065CB6C /* HistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoryViewController.h; sourceTree = "<group>"; };
 		64904A991C29EE930065CB6C /* HistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryViewController.m; sourceTree = "<group>"; };
 		64904A9B1C29F48E0065CB6C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		64B2DA6C1C2C108000792BD3 /* HistoryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoryTableViewController.h; sourceTree = "<group>"; };
+		64B2DA6D1C2C108000792BD3 /* HistoryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryTableViewController.m; sourceTree = "<group>"; };
 		64BF111E1C2AAA7F009A5EAD /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		64BF11201C2AAA85009A5EAD /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		64BF11221C2AAA90009A5EAD /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -72,6 +76,8 @@
 		64BF113B1C2AADEF009A5EAD /* ParseFacebookUtilsV4.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseFacebookUtilsV4.framework; path = LandRun/ParseFacebookUtilsV4.framework; sourceTree = "<group>"; };
 		64BF113C1C2AADEF009A5EAD /* ParseTwitterUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseTwitterUtils.framework; path = LandRun/ParseTwitterUtils.framework; sourceTree = "<group>"; };
 		64BF113D1C2AADEF009A5EAD /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseUI.framework; path = LandRun/ParseUI.framework; sourceTree = "<group>"; };
+		64BF11441C2B3C19009A5EAD /* DetailsHistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailsHistoryViewController.h; path = ../DetailsHistoryViewController.h; sourceTree = "<group>"; };
+		64BF11451C2B3C19009A5EAD /* DetailsHistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailsHistoryViewController.m; path = ../DetailsHistoryViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,11 +144,15 @@
 		64904A771C29CB070065CB6C /* LandRun */ = {
 			isa = PBXGroup;
 			children = (
+				64BF11441C2B3C19009A5EAD /* DetailsHistoryViewController.h */,
+				64BF11451C2B3C19009A5EAD /* DetailsHistoryViewController.m */,
 				64904A7B1C29CB070065CB6C /* AppDelegate.h */,
 				64904A7C1C29CB070065CB6C /* AppDelegate.m */,
 				64904A7E1C29CB070065CB6C /* ViewController.h */,
 				64904A7F1C29CB070065CB6C /* ViewController.m */,
 				64904A811C29CB070065CB6C /* Main.storyboard */,
+				64B2DA6C1C2C108000792BD3 /* HistoryTableViewController.h */,
+				64B2DA6D1C2C108000792BD3 /* HistoryTableViewController.m */,
 				64904A951C29EE850065CB6C /* StartLandViewController.h */,
 				64904A961C29EE850065CB6C /* StartLandViewController.m */,
 				64904A981C29EE930065CB6C /* HistoryViewController.h */,
@@ -238,6 +248,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64B2DA6E1C2C108000792BD3 /* HistoryTableViewController.m in Sources */,
+				64BF11461C2B3C19009A5EAD /* DetailsHistoryViewController.m in Sources */,
 				64904A941C29E7550065CB6C /* LoggedViewController.m in Sources */,
 				64904A801C29CB070065CB6C /* ViewController.m in Sources */,
 				64904A971C29EE850065CB6C /* StartLandViewController.m in Sources */,

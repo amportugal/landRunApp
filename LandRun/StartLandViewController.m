@@ -9,9 +9,11 @@
 #import "StartLandViewController.h"
 #import <Parse/Parse.h>
 #import "AssetsLibrary/AssetsLibrary.h"
+#import "LoggedViewController.h"
 
 @import CoreLocation;
 
+NSInteger landId;
 
 @implementation StartLandViewController
 
@@ -23,11 +25,6 @@
     [self.KcalLabel setHidden:YES];
     [self.TempLabel setHidden:YES];
     
-    /*[self.mapView addObserver:self
-                   forKeyPath:@"myLocation"
-                      options:(NSKeyValueObservingOptionNew |
-                               NSKeyValueObservingOptionOld)
-                      context:NULL];*/
 
     
     locationManager = [[CLLocationManager alloc] init];
@@ -39,6 +36,23 @@
     
     [locationManager startUpdatingLocation];
     
+    self.navigationItem.hidesBackButton=YES;
+    
+    /*Get last land id*/
+    PFQuery *query = [PFQuery queryWithClassName:@"LandSnapshot"];
+    [query orderByDescending:@"landId"];
+    query.limit=1;
+    
+    [query getFirstObjectInBackgroundWithBlock:^(PFObject * _Nullable object, NSError * _Nullable error) {
+        if(!error){
+            NSString *landId_string=[object objectForKey:@"landId"];
+            if (landId_string == nil)
+                landId=0;
+            else
+                landId=[landId_string intValue];
+                landId=landId+1;
+        }
+    }];
 }
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation {
@@ -60,6 +74,66 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (IBAction)StopTheLand:(id)sender {
+    
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Stop the Land"
+                                                    message:@"Are you sure you want to finish this Land?"
+                                                   delegate:self
+                                          cancelButtonTitle:@"No"
+                                          otherButtonTitles:@"Yes", nil];
+    alert.tag=2;
+    [alert show];
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Land" message:@"Insert the name of your Land:" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"OK", nil];
+    alert.tag=1;
+    switch (alertView.tag) {
+        case 1:
+            switch(buttonIndex) {
+                case 0: //"Cancel" pressed
+                    break;
+                case 1: //"OK" pressed
+                    NSLog([[alertView textFieldAtIndex:0] text]);
+                    
+                    PFQuery *query = [PFQuery queryWithClassName:@"LandSnapshot"];
+                    [query whereKey:@"landId" equalTo:@(landId)];
+                    
+                    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error){
+                        if (error) {
+                            NSLog(@"%@", error);
+                            return;
+                        }
+                        for (PFObject *message in objects) {
+                            message[@"landName"]=[[alertView textFieldAtIndex:0] text];
+                        }
+                        int success = [PFObject saveAll:objects];
+                        NSLog(@"Status %@", success? @"updated successfully": @"update failed");
+                    }];
+                    
+                    
+                    [self.navigationController popViewControllerAnimated:YES];
+                    break;
+            }
+            break;
+        case 2:
+            switch(buttonIndex) {
+                case 0: //"No" pressed
+                    break;
+                case 1: //"Yes" pressed
+                    alert.alertViewStyle = UIAlertViewStylePlainTextInput;
+                    [alert show];
+                    break;
+            }
+            break;
+            
+        default:
+            break;
+    }
+    
+}
 
 - (IBAction)takePhoto:(id)sender {
     UIImagePickerController *picker = [[UIImagePickerController alloc] init];
@@ -88,7 +162,7 @@
             
             NSLog(@"url %@", [image_url absoluteString]);
             [PFGeoPoint geoPointForCurrentLocationInBackground:^(PFGeoPoint * _Nullable geoPoint, NSError * _Nullable error) {
-                
+
                 if (!error) {
                     PFUser *current = [PFUser currentUser];
                     
@@ -100,6 +174,7 @@
                     landSnapshot[@"kCalories"] = @52;
                     landSnapshot[@"temperature"] = @53;
                     landSnapshot[@"position"] = geoPoint;
+                    landSnapshot[@"landId"] = [NSNumber numberWithInteger:landId];
                     
                     [landSnapshot saveInBackground];
                     
@@ -108,7 +183,7 @@
                     /*Add a marker to the map*/
                     MKPointAnnotation *annotation = [[MKPointAnnotation alloc] init];
                     [annotation setCoordinate:coord];
-                    [annotation setTitle:@"Keep running bitch"];
+                    [annotation setTitle:@"Keep running"];
                     [self.mapView addAnnotation:annotation];
                     
                     

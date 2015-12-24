@@ -25,6 +25,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *KcalLabel;
 @property (weak, nonatomic) IBOutlet UILabel *TempLabel;
 
+- (IBAction)StopTheLand:(id)sender;
+
 - (IBAction)takePhoto:(id)sender;
 
 @end

@@ -101,7 +101,6 @@
                 
                 [self presentViewController:viewController animated:NO completion:NULL];
                 
-                                NSLog(@"Minha vida é terrivel2");
             }
         }];
     }
