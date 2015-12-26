@@ -11,6 +11,8 @@
 #import "AssetsLibrary/AssetsLibrary.h"
 #import "LoggedViewController.h"
 
+
+
 @import CoreLocation;
 
 NSInteger landId;
