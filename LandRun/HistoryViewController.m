@@ -60,8 +60,8 @@
     
 }
 
--(MKAnnotationView *) mapView:(MKMapView *)mapView viewForAnnotation:(nonnull id<MKAnnotation>)annotation{
-    NSLog(@"here");
+/*-(MKAnnotationView *) mapView:(MKMapView *)mapView viewForAnnotation:(nonnull id<MKAnnotation>)annotation{
+    NSLog(@"herenow");
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     DetailsHistoryViewController *viewController = [storyboard instantiateViewControllerWithIdentifier:@"detailsHistoryPage"];
     [viewController setModalPresentationStyle:UIModalPresentationFullScreen];
@@ -72,7 +72,7 @@
     [self.navigationController pushViewController:viewController animated:YES];
     
     return annotation;
-}
+}*/
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -89,4 +89,17 @@
 }
 */
 
+- (IBAction)landSelected:(id)sender {
+    MKPointAnnotation *annot=[self.mapView.selectedAnnotations objectAtIndex:0];
+    
+    
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    DetailsHistoryViewController *viewController = [storyboard instantiateViewControllerWithIdentifier:@"detailsHistoryPage"];
+    [viewController setModalPresentationStyle:UIModalPresentationFullScreen];
+    
+    viewController.photoName=[annot subtitle];
+    
+    //[self presentViewController:viewController animated:NO completion:NULL];
+    [self.navigationController pushViewController:viewController animated:YES];
+}
 @end

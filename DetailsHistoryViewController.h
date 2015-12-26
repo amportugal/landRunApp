@@ -11,5 +11,11 @@
 @interface DetailsHistoryViewController : UIViewController
 
 @property (nonatomic, strong) NSString *photoName;
+@property (weak, nonatomic) IBOutlet UILabel *HumLabel;
+@property (weak, nonatomic) IBOutlet UILabel *PressLabel;
+@property (weak, nonatomic) IBOutlet UILabel *KcalLabel;
+@property (weak, nonatomic) IBOutlet UILabel *TempLabel;
+
+@property (weak, nonatomic) IBOutlet UIImageView *photo_image;
 
 @end

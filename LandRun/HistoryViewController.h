@@ -11,6 +11,8 @@
 
 @interface HistoryViewController : UIViewController <MKMapViewDelegate>
 
+- (IBAction)landSelected:(id)sender;
+
 @property (nonatomic, strong) NSString *valueToSearch;
 
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
