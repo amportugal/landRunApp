@@ -7,6 +7,7 @@
 //
 
 #import "LoggedViewController.h"
+#import "deviceSelector.h"
 
 @interface LoggedViewController ()
 
@@ -24,6 +25,7 @@
     // Dispose of any resources that can be recreated.
 }
 
+
 /*
 #pragma mark - Navigation
 
@@ -34,4 +36,14 @@
 }
 */
 
+- (IBAction)startLand:(id)sender {
+    
+    deviceSelector *dS = [[deviceSelector alloc]initWithStyle:UITableViewStyleGrouped];
+    
+    [dS setModalPresentationStyle:UIModalPresentationFullScreen];
+    
+    [self presentViewController:dS animated:NO completion:NULL];
+
+    
+}
 @end

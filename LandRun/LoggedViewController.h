@@ -10,4 +10,8 @@
 
 @interface LoggedViewController : UIViewController
 
+
+- (IBAction)startLand:(id)sender;
+
+
 @end

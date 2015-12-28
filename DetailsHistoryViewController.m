@@ -34,32 +34,27 @@
     
     PFObject *object=[query getFirstObject];
 
-    self.HumLabel.text=[NSString stringWithFormat:@"%@", object[@"humidity"]];
-    self.PressLabel.text=[NSString stringWithFormat:@"%@", object[@"pressure"]];
-    self.KcalLabel.text=[NSString stringWithFormat:@"%@", object[@"kCalories"]];
-    self.TempLabel.text=[NSString stringWithFormat:@"%@", object[@"temperature"]];
+    self.HumLabel.text=[NSString stringWithFormat:@"%0.1f%%rH", [object[@"humidity"] floatValue]];
+    self.PressLabel.text=[NSString stringWithFormat:@"%@ mBar", object[@"pressure"]];
+    self.TempLabel.text=[NSString stringWithFormat:@"%0.1fºC", [object[@"temperature"] floatValue]];
             
     [self.HumLabel setHidden:NO];
     [self.PressLabel setHidden:NO];
-    [self.KcalLabel setHidden:NO];
     [self.TempLabel setHidden:NO];
     
     typedef void (^ALAssetsLibraryAssetForURLResultBlock)(ALAsset *asset);
     typedef void (^ALAssetsLibraryAccessFailureBlock)(NSError *error);
     
     
-    /*ALAssetsLibraryAssetForURLResultBlock resultblock = ^(ALAsset *myasset)
+    ALAssetsLibraryAssetForURLResultBlock resultblock = ^(ALAsset *myasset)
     {
-        if(!myasset)
-            NSLog(@"I am here");
         ALAssetRepresentation *rep = [myasset defaultRepresentation];
         CGImageRef iref = [rep fullResolutionImage];
             if (iref) {
-                NSLog(@"I am here2");
+                UIImage *myImage = [UIImage imageWithCGImage:iref];
+                self.photo_image.image = myImage;
                 dispatch_async(dispatch_get_main_queue(), ^{
-                    NSLog(@"I am here3");
-                    UIImage *myImage = [UIImage imageWithCGImage:iref scale:[rep scale] orientation:(UIImageOrientation)[rep orientation]];
-                    self.photo_image.image = myImage;
+                    
                 });
             }
     };
@@ -69,13 +64,22 @@
         NSLog(@"Can't get image - %@",[myerror localizedDescription]);
     };
     
-    ALAssetsLibrary* assetslibrary = [[ALAssetsLibrary alloc] init];
-    NSURL *url = [NSURL URLWithString:@"assets-library://asset/asset.JPG?id=CDC76125-CECE-4572-9D83-FF1A4AAE1CBD&ext=JPG"];
+    ALAssetsLibrary* assetslibrary =  [self defaultAssetsLibrary];
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@", object[@"photoName"]]];
     [assetslibrary assetForURL:url
                    resultBlock:resultblock
-                  failureBlock:failureblock];*/
+                  failureBlock:failureblock];
     
     
+}
+
+- (ALAssetsLibrary *)defaultAssetsLibrary {
+    static dispatch_once_t pred = 0;
+    static ALAssetsLibrary *library = nil;
+    dispatch_once(&pred, ^{
+        library = [[ALAssetsLibrary alloc] init];
+    });
+    return library;
 }
 
 

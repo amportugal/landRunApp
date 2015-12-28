@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AssetsLibrary/AssetsLibrary.h>
 
 @interface DetailsHistoryViewController : UIViewController
 
@@ -17,5 +18,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *TempLabel;
 
 @property (weak, nonatomic) IBOutlet UIImageView *photo_image;
+
+- (ALAssetsLibrary *)defaultAssetsLibrary;
 
 @end

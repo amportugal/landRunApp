@@ -23,6 +23,7 @@
     self.textViewUsername.delegate = self;
     self.textViewPassword.delegate = self;
     
+    
 }
 
 - (void)didReceiveMemoryWarning {

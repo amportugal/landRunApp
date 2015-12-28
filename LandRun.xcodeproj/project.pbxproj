@@ -18,6 +18,21 @@
 		64904A971C29EE850065CB6C /* StartLandViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 64904A961C29EE850065CB6C /* StartLandViewController.m */; };
 		64904A9A1C29EE930065CB6C /* HistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 64904A991C29EE930065CB6C /* HistoryViewController.m */; };
 		64904A9C1C29F48E0065CB6C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64904A9B1C29F48E0065CB6C /* MapKit.framework */; };
+		6496D5951C3153A9001BA186 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6496D58F1C3153A9001BA186 /* Bolts.framework */; };
+		6496D5961C3153A9001BA186 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6496D5901C3153A9001BA186 /* Parse.framework */; };
+		6496D5971C3153A9001BA186 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6496D5911C3153A9001BA186 /* ParseFacebookUtils.framework */; };
+		6496D5981C3153A9001BA186 /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6496D5921C3153A9001BA186 /* ParseFacebookUtilsV4.framework */; };
+		6496D5991C3153A9001BA186 /* ParseTwitterUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6496D5931C3153A9001BA186 /* ParseTwitterUtils.framework */; };
+		6496D59A1C3153A9001BA186 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6496D5941C3153A9001BA186 /* ParseUI.framework */; };
+		64973A7D1C317C6100F747AA /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64973A7C1C317C6100F747AA /* MessageUI.framework */; };
+		64973A7F1C317C6E00F747AA /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64973A7E1C317C6E00F747AA /* CoreBluetooth.framework */; };
+		64973A811C317CA900F747AA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64973A801C317CA900F747AA /* UIKit.framework */; };
+		64973A831C317CB500F747AA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64973A821C317CB500F747AA /* Foundation.framework */; };
+		64973A8A1C317CFE00F747AA /* BLEDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 64973A851C317CFE00F747AA /* BLEDevice.m */; };
+		64973A8B1C317CFE00F747AA /* BLEUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 64973A871C317CFE00F747AA /* BLEUtility.m */; };
+		64973A8C1C317CFE00F747AA /* Sensors.m in Sources */ = {isa = PBXBuildFile; fileRef = 64973A891C317CFE00F747AA /* Sensors.m */; };
+		64973A911C317E6100F747AA /* deviceCellTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = 64973A8E1C317E6100F747AA /* deviceCellTemplate.m */; };
+		64973A921C317E6100F747AA /* deviceSelector.m in Sources */ = {isa = PBXBuildFile; fileRef = 64973A901C317E6100F747AA /* deviceSelector.m */; };
 		64B2DA6E1C2C108000792BD3 /* HistoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 64B2DA6D1C2C108000792BD3 /* HistoryTableViewController.m */; };
 		64BF111F1C2AAA7F009A5EAD /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64BF111E1C2AAA7F009A5EAD /* CoreLocation.framework */; };
 		64BF11211C2AAA85009A5EAD /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64BF11201C2AAA85009A5EAD /* StoreKit.framework */; };
@@ -29,12 +44,6 @@
 		64BF112D1C2AAABA009A5EAD /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64BF112C1C2AAABA009A5EAD /* SystemConfiguration.framework */; };
 		64BF112F1C2AAAC2009A5EAD /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 64BF112E1C2AAAC2009A5EAD /* libz.tbd */; };
 		64BF11311C2AAACA009A5EAD /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 64BF11301C2AAACA009A5EAD /* libsqlite3.tbd */; };
-		64BF113E1C2AADEF009A5EAD /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64BF11381C2AADEF009A5EAD /* Bolts.framework */; };
-		64BF113F1C2AADEF009A5EAD /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64BF11391C2AADEF009A5EAD /* Parse.framework */; };
-		64BF11401C2AADEF009A5EAD /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64BF113A1C2AADEF009A5EAD /* ParseFacebookUtils.framework */; };
-		64BF11411C2AADEF009A5EAD /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64BF113B1C2AADEF009A5EAD /* ParseFacebookUtilsV4.framework */; };
-		64BF11421C2AADEF009A5EAD /* ParseTwitterUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64BF113C1C2AADEF009A5EAD /* ParseTwitterUtils.framework */; };
-		64BF11431C2AADEF009A5EAD /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64BF113D1C2AADEF009A5EAD /* ParseUI.framework */; };
 		64BF11461C2B3C19009A5EAD /* DetailsHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 64BF11451C2B3C19009A5EAD /* DetailsHistoryViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +67,26 @@
 		64904A981C29EE930065CB6C /* HistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoryViewController.h; sourceTree = "<group>"; };
 		64904A991C29EE930065CB6C /* HistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryViewController.m; sourceTree = "<group>"; };
 		64904A9B1C29F48E0065CB6C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		6496D58F1C3153A9001BA186 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = "../../Downloads/parse-library-1/Bolts.framework"; sourceTree = "<group>"; };
+		6496D5901C3153A9001BA186 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = "../../Downloads/parse-library-1/Parse.framework"; sourceTree = "<group>"; };
+		6496D5911C3153A9001BA186 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseFacebookUtils.framework; path = "../../Downloads/parse-library-1/ParseFacebookUtils.framework"; sourceTree = "<group>"; };
+		6496D5921C3153A9001BA186 /* ParseFacebookUtilsV4.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseFacebookUtilsV4.framework; path = "../../Downloads/parse-library-1/ParseFacebookUtilsV4.framework"; sourceTree = "<group>"; };
+		6496D5931C3153A9001BA186 /* ParseTwitterUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseTwitterUtils.framework; path = "../../Downloads/parse-library-1/ParseTwitterUtils.framework"; sourceTree = "<group>"; };
+		6496D5941C3153A9001BA186 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseUI.framework; path = "../../Downloads/parse-library-1/ParseUI.framework"; sourceTree = "<group>"; };
+		64973A7C1C317C6100F747AA /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		64973A7E1C317C6E00F747AA /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		64973A801C317CA900F747AA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		64973A821C317CB500F747AA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		64973A841C317CFE00F747AA /* BLEDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BLEDevice.h; path = "../../../Downloads/iOS-Angel-Demo-master/SensorTag/Sensor Example Source Code 1.1.0/SensorTagEX/BLEDevice.h"; sourceTree = "<group>"; };
+		64973A851C317CFE00F747AA /* BLEDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BLEDevice.m; path = "../../../Downloads/iOS-Angel-Demo-master/SensorTag/Sensor Example Source Code 1.1.0/SensorTagEX/BLEDevice.m"; sourceTree = "<group>"; };
+		64973A861C317CFE00F747AA /* BLEUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BLEUtility.h; path = "../../../Downloads/iOS-Angel-Demo-master/SensorTag/Sensor Example Source Code 1.1.0/SensorTagEX/BLEUtility.h"; sourceTree = "<group>"; };
+		64973A871C317CFE00F747AA /* BLEUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BLEUtility.m; path = "../../../Downloads/iOS-Angel-Demo-master/SensorTag/Sensor Example Source Code 1.1.0/SensorTagEX/BLEUtility.m"; sourceTree = "<group>"; };
+		64973A881C317CFE00F747AA /* Sensors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Sensors.h; path = "../../../Downloads/iOS-Angel-Demo-master/SensorTag/Sensor Example Source Code 1.1.0/SensorTagEX/Sensors.h"; sourceTree = "<group>"; };
+		64973A891C317CFE00F747AA /* Sensors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Sensors.m; path = "../../../Downloads/iOS-Angel-Demo-master/SensorTag/Sensor Example Source Code 1.1.0/SensorTagEX/Sensors.m"; sourceTree = "<group>"; };
+		64973A8D1C317E6100F747AA /* deviceCellTemplate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = deviceCellTemplate.h; path = "../../../Downloads/iOS-Angel-Demo-master/SensorTag/Sensor Example Source Code 1.1.0/SensorTagEX/deviceCellTemplate.h"; sourceTree = "<group>"; };
+		64973A8E1C317E6100F747AA /* deviceCellTemplate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = deviceCellTemplate.m; path = "../../../Downloads/iOS-Angel-Demo-master/SensorTag/Sensor Example Source Code 1.1.0/SensorTagEX/deviceCellTemplate.m"; sourceTree = "<group>"; };
+		64973A8F1C317E6100F747AA /* deviceSelector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = deviceSelector.h; path = "../../../Downloads/iOS-Angel-Demo-master/SensorTag/Sensor Example Source Code 1.1.0/SensorTagEX/deviceSelector.h"; sourceTree = "<group>"; };
+		64973A901C317E6100F747AA /* deviceSelector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = deviceSelector.m; path = "../../../Downloads/iOS-Angel-Demo-master/SensorTag/Sensor Example Source Code 1.1.0/SensorTagEX/deviceSelector.m"; sourceTree = "<group>"; };
 		64B2DA6C1C2C108000792BD3 /* HistoryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoryTableViewController.h; sourceTree = "<group>"; };
 		64B2DA6D1C2C108000792BD3 /* HistoryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryTableViewController.m; sourceTree = "<group>"; };
 		64BF111E1C2AAA7F009A5EAD /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -70,12 +99,6 @@
 		64BF112C1C2AAABA009A5EAD /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		64BF112E1C2AAAC2009A5EAD /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		64BF11301C2AAACA009A5EAD /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
-		64BF11381C2AADEF009A5EAD /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = LandRun/Bolts.framework; sourceTree = "<group>"; };
-		64BF11391C2AADEF009A5EAD /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = LandRun/Parse.framework; sourceTree = "<group>"; };
-		64BF113A1C2AADEF009A5EAD /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseFacebookUtils.framework; path = LandRun/ParseFacebookUtils.framework; sourceTree = "<group>"; };
-		64BF113B1C2AADEF009A5EAD /* ParseFacebookUtilsV4.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseFacebookUtilsV4.framework; path = LandRun/ParseFacebookUtilsV4.framework; sourceTree = "<group>"; };
-		64BF113C1C2AADEF009A5EAD /* ParseTwitterUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseTwitterUtils.framework; path = LandRun/ParseTwitterUtils.framework; sourceTree = "<group>"; };
-		64BF113D1C2AADEF009A5EAD /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseUI.framework; path = LandRun/ParseUI.framework; sourceTree = "<group>"; };
 		64BF11441C2B3C19009A5EAD /* DetailsHistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailsHistoryViewController.h; path = ../DetailsHistoryViewController.h; sourceTree = "<group>"; };
 		64BF11451C2B3C19009A5EAD /* DetailsHistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailsHistoryViewController.m; path = ../DetailsHistoryViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -85,23 +108,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				64BF11401C2AADEF009A5EAD /* ParseFacebookUtils.framework in Frameworks */,
+				64973A831C317CB500F747AA /* Foundation.framework in Frameworks */,
+				64973A811C317CA900F747AA /* UIKit.framework in Frameworks */,
+				64973A7F1C317C6E00F747AA /* CoreBluetooth.framework in Frameworks */,
+				64973A7D1C317C6100F747AA /* MessageUI.framework in Frameworks */,
+				6496D5951C3153A9001BA186 /* Bolts.framework in Frameworks */,
+				6496D5961C3153A9001BA186 /* Parse.framework in Frameworks */,
+				6496D5971C3153A9001BA186 /* ParseFacebookUtils.framework in Frameworks */,
+				6496D5981C3153A9001BA186 /* ParseFacebookUtilsV4.framework in Frameworks */,
+				6496D5991C3153A9001BA186 /* ParseTwitterUtils.framework in Frameworks */,
+				6496D59A1C3153A9001BA186 /* ParseUI.framework in Frameworks */,
 				64BF11311C2AAACA009A5EAD /* libsqlite3.tbd in Frameworks */,
 				64BF112F1C2AAAC2009A5EAD /* libz.tbd in Frameworks */,
 				64BF112D1C2AAABA009A5EAD /* SystemConfiguration.framework in Frameworks */,
-				64BF113E1C2AADEF009A5EAD /* Bolts.framework in Frameworks */,
 				64BF112B1C2AAAAA009A5EAD /* Security.framework in Frameworks */,
-				64BF11421C2AADEF009A5EAD /* ParseTwitterUtils.framework in Frameworks */,
 				64BF11291C2AAAA4009A5EAD /* QuartzCore.framework in Frameworks */,
-				64BF113F1C2AADEF009A5EAD /* Parse.framework in Frameworks */,
-				64BF11431C2AADEF009A5EAD /* ParseUI.framework in Frameworks */,
 				64BF11271C2AAA9E009A5EAD /* CoreGraphics.framework in Frameworks */,
 				64BF11251C2AAA97009A5EAD /* CFNetwork.framework in Frameworks */,
 				64BF11231C2AAA90009A5EAD /* AudioToolbox.framework in Frameworks */,
 				64BF11211C2AAA85009A5EAD /* StoreKit.framework in Frameworks */,
 				64BF111F1C2AAA7F009A5EAD /* CoreLocation.framework in Frameworks */,
 				64904A9C1C29F48E0065CB6C /* MapKit.framework in Frameworks */,
-				64BF11411C2AADEF009A5EAD /* ParseFacebookUtilsV4.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,13 +138,17 @@
 		64904A6C1C29CB070065CB6C = {
 			isa = PBXGroup;
 			children = (
+				64973A821C317CB500F747AA /* Foundation.framework */,
+				64973A801C317CA900F747AA /* UIKit.framework */,
+				64973A7E1C317C6E00F747AA /* CoreBluetooth.framework */,
+				64973A7C1C317C6100F747AA /* MessageUI.framework */,
+				6496D58F1C3153A9001BA186 /* Bolts.framework */,
+				6496D5901C3153A9001BA186 /* Parse.framework */,
+				6496D5911C3153A9001BA186 /* ParseFacebookUtils.framework */,
+				6496D5921C3153A9001BA186 /* ParseFacebookUtilsV4.framework */,
+				6496D5931C3153A9001BA186 /* ParseTwitterUtils.framework */,
+				6496D5941C3153A9001BA186 /* ParseUI.framework */,
 				64BF11301C2AAACA009A5EAD /* libsqlite3.tbd */,
-				64BF11381C2AADEF009A5EAD /* Bolts.framework */,
-				64BF11391C2AADEF009A5EAD /* Parse.framework */,
-				64BF113A1C2AADEF009A5EAD /* ParseFacebookUtils.framework */,
-				64BF113B1C2AADEF009A5EAD /* ParseFacebookUtilsV4.framework */,
-				64BF113C1C2AADEF009A5EAD /* ParseTwitterUtils.framework */,
-				64BF113D1C2AADEF009A5EAD /* ParseUI.framework */,
 				64BF112E1C2AAAC2009A5EAD /* libz.tbd */,
 				64BF112C1C2AAABA009A5EAD /* SystemConfiguration.framework */,
 				64BF112A1C2AAAAA009A5EAD /* Security.framework */,
@@ -144,6 +175,16 @@
 		64904A771C29CB070065CB6C /* LandRun */ = {
 			isa = PBXGroup;
 			children = (
+				64973A8D1C317E6100F747AA /* deviceCellTemplate.h */,
+				64973A8E1C317E6100F747AA /* deviceCellTemplate.m */,
+				64973A8F1C317E6100F747AA /* deviceSelector.h */,
+				64973A901C317E6100F747AA /* deviceSelector.m */,
+				64973A841C317CFE00F747AA /* BLEDevice.h */,
+				64973A851C317CFE00F747AA /* BLEDevice.m */,
+				64973A861C317CFE00F747AA /* BLEUtility.h */,
+				64973A871C317CFE00F747AA /* BLEUtility.m */,
+				64973A881C317CFE00F747AA /* Sensors.h */,
+				64973A891C317CFE00F747AA /* Sensors.m */,
 				64BF11441C2B3C19009A5EAD /* DetailsHistoryViewController.h */,
 				64BF11451C2B3C19009A5EAD /* DetailsHistoryViewController.m */,
 				64904A7B1C29CB070065CB6C /* AppDelegate.h */,
@@ -249,14 +290,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				64B2DA6E1C2C108000792BD3 /* HistoryTableViewController.m in Sources */,
+				64973A8A1C317CFE00F747AA /* BLEDevice.m in Sources */,
 				64BF11461C2B3C19009A5EAD /* DetailsHistoryViewController.m in Sources */,
+				64973A8B1C317CFE00F747AA /* BLEUtility.m in Sources */,
+				64973A921C317E6100F747AA /* deviceSelector.m in Sources */,
 				64904A941C29E7550065CB6C /* LoggedViewController.m in Sources */,
+				64973A8C1C317CFE00F747AA /* Sensors.m in Sources */,
 				64904A801C29CB070065CB6C /* ViewController.m in Sources */,
 				64904A971C29EE850065CB6C /* StartLandViewController.m in Sources */,
 				64904A7D1C29CB070065CB6C /* AppDelegate.m in Sources */,
 				64904A7A1C29CB070065CB6C /* main.m in Sources */,
 				64904A9A1C29EE930065CB6C /* HistoryViewController.m in Sources */,
 				64904A911C29CE170065CB6C /* RegisterViewController.m in Sources */,
+				64973A911C317E6100F747AA /* deviceCellTemplate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
