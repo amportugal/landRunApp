@@ -180,7 +180,7 @@ NSInteger pressure;
 
                 if (!error) {
                     PFUser *current = [PFUser currentUser];
-                    
+                    NSLog(@"TESTE!!!!!");
                     PFObject *landSnapshot = [PFObject objectWithClassName:@"LandSnapshot"];
                     landSnapshot[@"username"] = current.username;
                     landSnapshot[@"photoName"] = [image_url absoluteString];
@@ -201,6 +201,16 @@ NSInteger pressure;
                     [self.mapView addAnnotation:annotation];
                     
                     
+                }
+                else
+                {
+                    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Location not found"
+                                                                    message:@"We could not find your current location. Try again in other place."
+                                                                   delegate:nil
+                                                          cancelButtonTitle:@"OK"
+                                                          otherButtonTitles:nil];
+                    alert.tag=3;
+                    [alert show];
                 }
                 
             }];

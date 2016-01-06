@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		645EB5D91C3D274A000BF6E8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 645EB5D81C3D274A000BF6E8 /* Images.xcassets */; };
 		64904A7A1C29CB070065CB6C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 64904A791C29CB070065CB6C /* main.m */; };
 		64904A7D1C29CB070065CB6C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 64904A7C1C29CB070065CB6C /* AppDelegate.m */; };
 		64904A801C29CB070065CB6C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 64904A7F1C29CB070065CB6C /* ViewController.m */; };
 		64904A831C29CB070065CB6C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64904A811C29CB070065CB6C /* Main.storyboard */; };
-		64904A851C29CB070065CB6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64904A841C29CB070065CB6C /* Assets.xcassets */; };
 		64904A881C29CB070065CB6C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64904A861C29CB070065CB6C /* LaunchScreen.storyboard */; };
 		64904A911C29CE170065CB6C /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 64904A901C29CE170065CB6C /* RegisterViewController.m */; };
 		64904A941C29E7550065CB6C /* LoggedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 64904A931C29E7550065CB6C /* LoggedViewController.m */; };
@@ -48,6 +48,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		645EB5D81C3D274A000BF6E8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		64904A751C29CB070065CB6C /* LandRun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LandRun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		64904A791C29CB070065CB6C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		64904A7B1C29CB070065CB6C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -55,7 +56,6 @@
 		64904A7E1C29CB070065CB6C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		64904A7F1C29CB070065CB6C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		64904A821C29CB070065CB6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		64904A841C29CB070065CB6C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		64904A871C29CB070065CB6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		64904A891C29CB070065CB6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		64904A8F1C29CE170065CB6C /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
@@ -202,9 +202,9 @@
 				64904A931C29E7550065CB6C /* LoggedViewController.m */,
 				64904A8F1C29CE170065CB6C /* RegisterViewController.h */,
 				64904A901C29CE170065CB6C /* RegisterViewController.m */,
-				64904A841C29CB070065CB6C /* Assets.xcassets */,
 				64904A861C29CB070065CB6C /* LaunchScreen.storyboard */,
 				64904A891C29CB070065CB6C /* Info.plist */,
+				645EB5D81C3D274A000BF6E8 /* Images.xcassets */,
 				64904A781C29CB070065CB6C /* Supporting Files */,
 			);
 			path = LandRun;
@@ -276,8 +276,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				645EB5D91C3D274A000BF6E8 /* Images.xcassets in Resources */,
 				64904A881C29CB070065CB6C /* LaunchScreen.storyboard in Resources */,
-				64904A851C29CB070065CB6C /* Assets.xcassets in Resources */,
 				64904A831C29CB070065CB6C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -411,7 +411,8 @@
 		64904A8D1C29CB070065CB6C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -430,7 +431,8 @@
 		64904A8E1C29CB070065CB6C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

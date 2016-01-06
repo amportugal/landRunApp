@@ -13,5 +13,6 @@
 
 - (IBAction)startLand:(id)sender;
 
+- (IBAction)logoutButton:(id)sender;
 
 @end

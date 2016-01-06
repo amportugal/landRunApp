@@ -8,7 +8,7 @@
 
 #import "LoggedViewController.h"
 #import "deviceSelector.h"
-
+#import <Parse/Parse.h>
 @interface LoggedViewController ()
 
 @end
@@ -46,4 +46,23 @@
 
     
 }
+
+- (IBAction)logoutButton:(id)sender {
+   
+   [PFUser logOut];
+    if (![PFUser currentUser])
+   {
+       //go to login page
+       NSLog(@"GOtoLogin");
+       UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+       UIViewController *viewController = [storyboard instantiateViewControllerWithIdentifier:@"loginPage"];
+       [viewController setModalPresentationStyle:UIModalPresentationFullScreen];
+       
+       [self presentViewController:viewController animated:NO completion:NULL];
+
+   }
+   
+    
+}
+
 @end

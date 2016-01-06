@@ -24,6 +24,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     // Do any additional setup after loading the view.
     
     NSLog(@"Value %@", self.valueToSearch);
@@ -90,7 +91,19 @@
 */
 
 - (IBAction)landSelected:(id)sender {
+    
     MKPointAnnotation *annot=[self.mapView.selectedAnnotations objectAtIndex:0];
+    
+    if([annot subtitle]==nil)
+    {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"No moment selected"
+                                                        message:@"You must select a moment from the map."
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+        [alert show];
+        return;
+    }
     
     
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
